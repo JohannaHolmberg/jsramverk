@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Reports from './Components/Reports';
+import Nav from './Components/Nav';
+import Index from './Components/Index';
+
+
+import Kmom01 from './Components/Week/kmom01';
+import Kmom02 from './Components/Week/kmom02';
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <Switch>
+            <div className="App">
+
+             <Nav />
+
+              <div className="body-content">
+             <Route path="/" exact component={Index}/>
+             <Route path="/reports" component={Reports}/>
+
+            <Route path="/reports/week/1" component={Kmom01}/>
+            <Route path="/reports/week/2" component={Kmom02}/>
+
+            </div>
+
+             </div>
+
+
+        </Switch>
+    </Router>
+
+
   );
 }
 
