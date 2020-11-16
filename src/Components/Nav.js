@@ -15,21 +15,25 @@ function Nav() {
 
 
 
-      <div class="navbar">
+      <div className="navbar">
 
 
         <Link to='/'><li>Hem</li></Link>
 
 
-        <div class="dropdown">
-          <button class="dropbtn">Redovisa </button>
+        <div className="dropdown">
+          <button className="dropbtn">Redovisa </button>
 
 
-          <div class="dropdown-content">
-            <Link to='/reports/week/1' className='report-link'><li>Kmom01</li></Link>
-            <Link to='/reports/week/2' className='report-link'><li>Kmom02</li></Link>
+          <div className="dropdown-content">
+            <Link to='/reports' className='report-link'><li>Skriv veckorapport</li></Link>
+            <Link to='/reports/week/kmom01' className='report-link'><li>Kmom01</li></Link>
+            <Link to='/reports/week/kmom02' className='report-link'><li>Kmom02</li></Link>
           </div>
         </div>
+
+            <Link to='/register'><li>Registrera</li></Link>
+            <Link to='/login'><li>Logga in</li></Link>
       </div>
 
       </div>
